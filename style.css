@@ -32,6 +32,7 @@ Default: 1
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -46,7 +47,7 @@ html{
 }
 
 body{
-    font-family: sans-serif;
+    font-family: "Rubik" ,sans-serif;
     line-height: 1;
     font-weight: 500;
     color: #555;
@@ -87,13 +88,35 @@ body{
 
 .btn:link, .btn:visited {
   display: inline-block;
-  background-color: #e67e22;
-  color: #fff;
   text-decoration: none;
   font-size: 2rem;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  transition: background-color 0.3s;
 }
+
+.btn--full:link, .btn--full:visited{
+  background-color: #e67e22;
+  color: #fff;
+  margin-right: 1.8rem;
+}
+.btn--full:hover, .btn--full:active{
+  background-color: #cf711f;
+}
+
+.btn--outline:link, .btn--outline:visited{
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:hover, .btn--outline:active{
+  background-color: #fdf2e9;
+  /* border: 3px solid #fff; */
+
+  /* trick the border inside */
+  box-shadow:inset 0 0 0 3px #fff;
+}
+
 
 .hero-img {
   width: 100%;
